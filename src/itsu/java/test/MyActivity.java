@@ -18,6 +18,7 @@ public class MyActivity extends ModalActivity {
 
     @Override
     public void onCreate(Bundle bundle) {
+        this.setTitle("TestAppForCPhone");
         this.setContent("Content");
         this.setButton1Text("Yes");
         this.setButton2Text("No");
@@ -29,7 +30,7 @@ public class MyActivity extends ModalActivity {
 
     @Override
     public ReturnType onStop(Response response) {
-        return ReturnType.TYPE_END;
+        return ReturnType.TYPE_IGNORE;
     }
 
 }

@@ -3,7 +3,7 @@
 
 <manifest>
     <application>
-        <title>テストアプリケーション</title>
+        <title>TestAppForCPhone</title>
         <description>テスト用アプリ</description>
         <author>itsu</author>
         <version>1.0.0</version>
@@ -11,6 +11,9 @@
         <icon>https://google.co.jp</icon>
         <price>10</price>
         <initialize>itsu.java.test.Initializer</initialize>
+
+        <!--visible=falseで非表示（optionalなので指定しない場合は表示されます-->
+        <visible>false</visible>
     </application>
 
     <permission type = "default" />

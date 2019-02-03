@@ -1,7 +1,10 @@
 package itsu.java.test;
 
 import cn.nukkit.event.EventHandler;
+import cn.nukkit.event.block.BlockBreakEvent;
 import cn.nukkit.event.player.PlayerJoinEvent;
+import net.comorevi.cphone.cphone.utils.ManifestLoader;
+import net.comorevi.cphone.presenter.ActivityProcessor;
 import net.comorevi.cphone.presenter.SharingData;
 
 /**
@@ -20,8 +23,8 @@ public class Initializer extends net.comorevi.cphone.cphone.application.Initiali
     }
 
     @EventHandler
-    public void onJoin(PlayerJoinEvent event) {
-        event.getPlayer().sendMessage("This is a test message.");
+    public void onBreak(BlockBreakEvent event) {
+        ActivityProcessor.startActivity(event.getPlayer(), "TestAppForCPhone");
     }
 
 }
